@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+.env
+dist/
+build/
+
+# React (Frontend)
+client/node_modules/
+client/build/
+
+# Backend (Node.js/Express or ASP.NET Core)
+server/node_modules/
+server/bin/
+server/obj/
+server/.vs/
+server/.vscode/
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Environment files
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Misc
+.cache/
+.next/
+.sass-cache/
+.tmp/
+.temp/
+*.tmp
+*.temp
