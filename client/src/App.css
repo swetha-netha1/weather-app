@@ -1,0 +1,289 @@
+/* Body background */
+body {
+  background: linear-gradient(135deg, aqua, rgba(186, 85, 211, 0.6) 70%, rgba(128, 0, 128, 0.5)); /* Aqua to lighter purple */
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+/* General app container */
+.App {
+  text-align: center;
+  padding: 20px;
+  height: 100%; /* Ensure full height for the app */
+  display: flex;
+  justify-content: center; /* Centering the content horizontally */
+  align-items: center; /* Centering the content vertically */
+  flex-direction: column; /* Ensuring everything is in a vertical column */
+}
+
+/* Header styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+/* Container for search box and button */
+.search-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  gap: 10px; /* Add some space between the input and button */
+  margin-bottom: 20px; /* Maintain the margin below the container */
+}
+
+/* Input field for city name */
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 200px; /* Reduced width to fit better in the container */
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold; /* Make text bold */
+  background-color: #6CB4EE; /* Darker baby blue */
+  color: #000000; /* Pure black text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Let the button adjust its width based on content */
+}
+
+button:hover {
+  background-color: #B19CD9; /* Darker baby purple on hover */
+  color: #000000; /* Pure black text on hover */
+}
+
+button:disabled {
+  background-color: gray;
+  color: #000000; /* Pure black text for disabled state */
+}
+
+/* Error message styling */
+p {
+  font-size: 1.2rem;
+  color: red;
+  margin-top: 10px;
+}
+
+/* Weather info container */
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text inside the container */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: black;
+  max-width: 500px; /* Limit the width of the weather container */
+  width: 100%;
+}
+
+/* Weather details inside a bordered box */
+.weather-box {
+  border: 2px solid #4CAF50; /* Green border */
+  padding: 20px; /* Increased padding for better spacing */
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make the box take full width of its container */
+  margin-bottom: 20px; /* Add space below the box */
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 40px; /* Add space between images and weather data */
+}
+
+/* Style for the weather data */
+.weather-data {
+  text-align: left; /* Align weather data to the left */
+}
+
+/* Style for the images */
+.weather-box img {
+  max-height: 80px; /* Adjust image height to fit the box */
+  width: auto; /* Maintain aspect ratio */
+  opacity: 0.8; /* Slightly transparent */
+}
+
+/* Style for the upcoming weather button */
+.upcoming-weather-button {
+  margin-top: 20px; /* Add space above the button */
+}
+
+/* Adjust the styling for the headings in the weather box */
+.weather-box h3 {
+  margin-top: 0;
+}
+
+/* Weather details list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+li strong {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+li p {
+  margin: 5px 0;
+}
+
+/* Styling for the image placeholder before searching */
+.image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin-bottom: 60px;
+}
+
+.image-placeholder img {
+  max-width: 35%; /* Increased size for better visibility */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Styling for the meteorology image */
+.meteorology-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.meteorology-image img {
+  max-width: 10%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .search-container {
+    flex-direction: column; /* Stack input and button vertically on small screens */
+    gap: 10px;
+  }
+
+  input {
+    width: 80%;
+    margin-bottom: 0; /* Remove margin-bottom since gap handles spacing */
+  }
+
+  button {
+    width: 80%;
+    padding: 12px;
+  }
+
+  .weather-info {
+    padding: 15px;
+  }
+
+  .image-placeholder img {
+    max-width: 40%;
+  }
+
+  .meteorology-image img {
+    max-width: 20%;
+  }
+}
+
+/* Upcoming Weather Page Styling */
+.upcoming-weather-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.upcoming-weather-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.upcoming-weather-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.upcoming-weather-page li {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Upcoming Weather Section Styling */
+.upcoming-weather {
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  gap: 10px; /* Add space between boxes */
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.upcoming-weather h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.upcoming-day {
+  padding: 10px;
+  border: 2px solid #4CAF50; /* Green border */
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1 1 calc(33.333% - 20px); /* Flex basis to fit 3 boxes per row with gap */
+  min-width: 120px; /* Minimum width for each box */
+}
+.upcoming-day:last-child {
+  border-bottom: none;
+}
+
+.upcoming-day p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #000;
+}
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .upcoming-day {
+    flex: 1 1 calc(50% - 10px); /* Flex basis to fit 2 boxes per row with gap on smaller screens */
+  }
+}
